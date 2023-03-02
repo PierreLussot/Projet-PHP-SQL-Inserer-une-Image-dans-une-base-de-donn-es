@@ -124,3 +124,8 @@ section {
   font-size: 13px;
   margin-top: 10px;
 }
+
+.vide_message {
+  font-size: 15px;
+  color: #fff;
+}

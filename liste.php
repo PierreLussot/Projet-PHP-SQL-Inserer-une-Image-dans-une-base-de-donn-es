@@ -12,6 +12,20 @@
 <body>
     <section>
         <a href="index.php" class="link">Ajouter une photo</a>
+        <?php
+        require 'connexion_bdd.php';
+
+        //afficher la liste des photos qui sont das la bdd
+        $req = mysqli_query($connexion, "SELECT * FROM images");
+
+        //verifier la liste des photos qui sont dans la bdd
+        if (mysqli_num_rows($req) < 1) {
+        ?>
+            <p class="vide_message">La liste des photos est vide</p>
+        <?php
+        }
+
+        ?>
         <div class="box">
             <img class="img_principal" src="img/img1.png">
             <div>Oiseau</div>
