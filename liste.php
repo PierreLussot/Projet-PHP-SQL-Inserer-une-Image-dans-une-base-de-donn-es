@@ -24,15 +24,22 @@
             <p class="vide_message">La liste des photos est vide</p>
         <?php
         }
+        //afficher la liste des photos
 
+        while ($row = mysqli_fetch_assoc($req)) {
         ?>
-        <div class="box">
-            <img class="img_principal" src="img/img1.png">
-            <div>Oiseau</div>
-            <a href="#" class="delete_btn">
-                <img src="img/delete1.png">
-            </a>
-        </div>
+            <div class="box">
+                <img class="img_principal" src="images_bdd/<?= $row['img'] ?>">
+                <div> <?= $row['texte'] ?></div>
+                <a href="delete.php?id=<?= $row['id'] ?>" class="delete_btn">
+                    <img src="img/delete1.png">
+                </a>
+            </div>
+
+        <?php
+        }
+        ?>
+
 
     </section>
 </body>

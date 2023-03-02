@@ -4,9 +4,9 @@ if (isset($_POST['send'])) {
     //verifiez que l'image et le texte ont été choisie
     if (isset($_FILES['image']) && isset($_POST['text']) && $_POST['text'] != "") {
         //on recupere dabor le nom de l'image
-        $img_nom = ['name'];
+        $img_nom = $_FILES['image']['name'];
 
-        //Nous définosson un nom temporaire 
+        //Nous définisson un nom temporaire 
         $tmp_nom = $_FILES['image']['tmp_name'];
 
         //On recupere a l'heure actuelle
