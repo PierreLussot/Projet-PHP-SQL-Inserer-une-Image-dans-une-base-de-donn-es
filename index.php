@@ -1,3 +1,16 @@
+<?php
+require 'connexion_bdd.php';
+if (isset($_POST['send'])) {
+    $req = mysqli_prepare($connexion, "SELECT * FROM images");
+    //verifiez que l'image et le texte ont été choisie
+    if (isset($_FILES['image']) && isset($_POST['text']) && $_POST['text'] != "") {
+    } else {
+        //si les champs sont vides on affice un message
+        $message = "Veuillez remplir tous les champs !";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,13 +24,15 @@
 
 <body>
     <a href="liste.php" class="link">Liste des photos</a>
-    <p class="error">Veuillez remplir le formulaire</p>
-    <form action="" method="POST">
+    <p class="error"><?php if (isset($message)) {
+                            echo $message;
+                        } ?> </p>
+    <form action="" method="POST" enctype="multipart/form-data">
         <label for="">Ajouter une photo</label>
         <input type="file" name="image">
         <label for="">Description</label>
         <textarea name="text" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="Ajouter">
+        <input type="submit" value="Ajouter" name="send">
 
     </form>
 </body>

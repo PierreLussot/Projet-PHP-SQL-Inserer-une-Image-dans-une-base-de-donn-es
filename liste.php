@@ -19,27 +19,7 @@
                 <img src="img/delete1.png">
             </a>
         </div>
-        <div class="box">
-            <img class="img_principal" src="img/img1.png">
-            <div>Oiseau</div>
-            <a href="#" class="delete_btn">
-                <img src="img/delete1.png">
-            </a>
-        </div>
-        <div class="box">
-            <img class="img_principal" src="img/img1.png">
-            <div>Oiseau</div>
-            <a href="#" class="delete_btn">
-                <img src="img/delete1.png">
-            </a>
-        </div>
-        <div class="box">
-            <img class="img_principal" src="img/img1.png">
-            <div>Oiseau</div>
-            <a href="#" class="delete_btn">
-                <img src="img/delete1.png">
-            </a>
-        </div>
+
     </section>
 </body>
 
