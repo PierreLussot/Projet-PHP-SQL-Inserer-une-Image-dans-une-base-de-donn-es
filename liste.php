@@ -32,7 +32,7 @@
                 <img class="img_principal" src="images_bdd/<?= $row['img'] ?>">
                 <div> <?= $row['texte'] ?></div>
                 <a href="delete.php?id=<?= $row['id'] ?>" class="delete_btn">
-                    <img src="img/delete1.png">
+                    <img src="image/delete.png">
                 </a>
             </div>
 
